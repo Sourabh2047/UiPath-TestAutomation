@@ -1,0 +1,182 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Logout" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="ReportID" Type="InArgument(x:Int32)" />
+    <x:Property Name="TestID" Type="InArgument(x:String)" />
+    <x:Property Name="in_str_ApplicationURL" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Logout.ReportID>
+    <InArgument x:TypeArguments="x:Int32" />
+  </this:Logout.ReportID>
+  <this:Logout.TestID>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Logout.TestID>
+  <this:Logout.in_str_ApplicationURL>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Logout.in_str_ApplicationURL>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>807.2,1996</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Logout_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>ReporterForUiPath.Enums</x:String>
+      <x:String>ReporterForUiPath.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>ReporterForUiPath.Activities</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>ReporterForUiPath</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="LogoutWorkflow" sap:VirtualizedContainerService.HintSize="1265,1834" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message Execution Started" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Logout Workflow Execution Started&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="HomePage" sap:VirtualizedContainerService.HintSize="450,1474" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="3139403b-a6a0-4beb-bdd2-e6479f894e70" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1225" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'HomeIcon'" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3139403b-a6a0-4beb-bdd2-e6479f894e70" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://ejhp-dev39.fa.us6.oraclecloud.com/fscmUI/faces/FuseWelcome?_afrLoop=19946732837165594&amp;fnd=%3B%3B%3B%3Bfalse%3B256%3B%3B%3B&amp;_adf.ctrl-state=19ja0u1f71_225" CVScreenId="d362b362-a98e-46a9-8869-b18e343e5fd5" ContentHash="-67CqXAY50W9X96e9d08NA" CvElementArea="952, 174, 39, 38" CvType="Icon" DesignTimeRectangle="1523, 240, 24, 24" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="&lt;webctrl class='xiz' tableRow='1' tag='TABLE' /&gt;&lt;webctrl class='svg-outline' tableCol='12' tableRow='1' tag='path' /&gt;" FuzzySelectorArgument="&lt;webctrl class='xiz' tag='TABLE' /&gt;&lt;webctrl class='svg-outline' type='' aaname='' tag='path' /&gt;" Guid="f53fba91-f3d7-41e8-8c38-e46df56f003c" InformativeScreenshot="4b53c99c92afc4027512cee480e8beb7.png" Reference="pwY549v750yJCRtgqzgQGw/8MtX6ARO5kqmtWi1Z8meWA" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status Home Icon" sap:VirtualizedContainerService.HintSize="382,165" sap2010:WorkflowViewState.IdRef="StepStatus_1" ReportId="[ReportID]" Status="Compare" StepDescription="Bot Clicked on Home Icon Successfully" StepName="Home Icon" TakeScreenshot="False" TestId="[TestID]" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SettingsAndActions'" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3139403b-a6a0-4beb-bdd2-e6479f894e70" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://ejhp-dev39.fa.us6.oraclecloud.com/fscmUI/faces/FndOverview?_afrLoop=11744853131192527&amp;fnd=%3B%3B%3B%3Bfalse%3B256%3B%3B%3B&amp;fndGlobalItemNodeId=itemNode_fixed_assets_additions&amp;fndTaskItemNodeId=itemNode_AssetDashBoard_AdditionWorkArea&amp;_adf.ctrl-state=nd6zxku2d_1005" CVScreenId="8b969ddd-7e80-462b-88d7-ac575d75a125" ContentHash="UakvXATRFUeJi36HLwTZKQ" CvElementArea="1770, 204, 43, 42" CvType="Button" DesignTimeRectangle="1776, 209, 34, 34" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="&lt;webctrl tag='IMG' aaname='Settings and Actions' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='IMG' aaname='Settings and Actions' type='' class='xjd' /&gt;" Guid="05088031-e11e-4314-8022-cc61c9de155f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAM8SURBVFhH7ZhrSxtBGIX9f/0l/SKKGi8o3kBFBD8oiOKNoCJB8QYKgrcGQUFqxVqNRCLWVLzEKwrRxFOeaWdZxcSkFF0hB97s7GR23jPnPTMLm5f3eUyeDPfNp7Yv8gdD+haO6kfk15sEuchJbjcXh5gv8FXff8YUTyT11iAnueHwhBhs+eO9AQdHOX6Q8j2Ueg44wMUhRp29Arg4xDChVwCXHLFskCOWLT4uscfHx7+tP+2DgwONj4+ru7tbXV1dGh4e1urqqs7Ozpyx8Xhci4uLmp+fN0F7aWlJ4XBY9/f3T+ZMhbTE7ARcmTAYDKqsrEzl5eVqbm5Wa2ur6urqVFBQoKmpKUMIXF1dKT8/X0VFRSopKVFpaam5ct/X12cW8RoyVuzk5MSQ6Ozs1PHxsekDiURCkUhEe3t7enh4UDKZVCwWU2FhoSYmJszz9F9eXmp0dNSQnJmZMX3pkDGxnZ0d+Xw+LSwsmD53AHcbEhCbnJx0+iCMUrW1tRoYGDBj0iEtMXdSFKEc+Ov29tb5D9C2Aa6vrx3F3Dg/P1dDQ4P8fv//IcZqmaitrU1VVVXq6enR3Nyctre3jZ/cxAhLjEVwb8tmPTo9Pe34MRUyVoyIRqPq7e01k2NkNkF1dbXxjt2VBItgQ9TX16ujo8P4srGx0fiLRbk9mgppiaUCJdnY2DClojTFxcXGN6gHuKIYxNrb243SlZWVqqio0MrKitkwryErYlYRgvKCi4sLoyLq4UPgLqUdhy/7+/uNcltbW05/KvwTMdsGrH55edmUDs/RbxVz70quR0dHampq0uDgoKNuKmREjElvbm6MN2jbZODu7s4og3842YH1GIeumxiH9OzsrGpqarS5uZlWtVeJ2Yl3d3fNaR8IBLS2tqZQKKT19XWNjIwY/2BqDlbGQwzFIPYc+/v7amlp0dDQkClvKnJpiVlSPMyu43WCgdmRJOZcI0jCm8GCzcEYe/K7wTHBccHO5o0Bno8BGROzwFOnp6fG6IeHh6aUgDGMt8+8lMzCjrO786WxaYm9J3LEskWOWLb4GMQ8+4nAsx9VPPsZivDkhzsbsEVK6owJ3yLIRU5HKRtPbjwTY/oNzRhjkoAlovAAAAAASUVORK5CYII=" InformativeScreenshot="7e92c570a64b18f3344fcb04008502c1.png" Reference="pwY549v750yJCRtgqzgQGw/WkJtsfj9I0Gq2GgMnjGeIw" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Visible" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears" Retry="True">
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status Setting Icon" sap:VirtualizedContainerService.HintSize="382,165" sap2010:WorkflowViewState.IdRef="StepStatus_2" ReportId="[ReportID]" Status="Compare" StepDescription="Bot Clicked on Settings and Actions Icon" StepName="Settings and Actions Icon" TakeScreenshot="False" TestId="[TestID]" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SignOut'" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3139403b-a6a0-4beb-bdd2-e6479f894e70" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://ejhp-dev39.fa.us6.oraclecloud.com/fscmUI/faces/FndOverview?_afrLoop=11744853131192527&amp;fnd=%3B%3B%3B%3Bfalse%3B256%3B%3B%3B&amp;fndGlobalItemNodeId=itemNode_fixed_assets_additions&amp;fndTaskItemNodeId=itemNode_AssetDashBoard_AdditionWorkArea&amp;_adf.ctrl-state=nd6zxku2d_1005" CVScreenId="165dc5e7-9e96-4907-9713-dc1fed5a7a27" ContentHash="BqgPYaDoDU-eKJf85Lwjzw" CvTextArea="1711, 276, 67, 21" CvTextArgument="Sign Out" CvType="Text" DesignTimeRectangle="1714, 273, 64, 23" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='1' tag='A' aaname='Sign Out' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='A' aaname='Sign Out' class='xny xmv' check:text='Sign Out' /&gt;" Guid="bbea7087-f72e-4cd7-a4c2-6e7b8b0c3959" InformativeScreenshot="86bca1e9951f3feafe6103b3e81dc253.png" Reference="pwY549v750yJCRtgqzgQGw/GOOWH24z50mGrTy-1oed1A" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='*' title='*' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status Logout" sap:VirtualizedContainerService.HintSize="382,158" sap2010:WorkflowViewState.IdRef="StepStatus_3" ReportId="[ReportID]" Status="Compare" StepDescription="Bot is able to Logout from Application Successfully" StepName="Sign Out" TakeScreenshot="False" TestId="[TestID]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" ContentHash="50K59xfz-k6tbenKGKHwKw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFFSURBVDhPnZJZTsNAEESt7OtHjpQD5CNHyklyFrawYwirQBAQAiEQCAQiIJamnu2xHFtAYKQnW9Nd1TM97e0VCjYNuxE7YjvCYxG0ZvPPbIUGnaxBq2XWbmdhP5G3mc+nDEjo9+3HRVx5H42G+RkD3w+TRiOzXi8L+yzlvcpgY8Kg242D6aPCJ1/2XRHlr00YUCEKpMUc911QNS6k/NXfDKiK+E281Ov2LJIGK86At40D0RWSVccSPiFOXWHJGTAYQVUXnKKJ5+WyLToDJiowoMKUz3hSKtkglwsNhjJI3jUw+maQTiU8FofFos07A0YyedeHWs3uqlW7EVeVil3ouGeCqkcSHgj6NucMGEk6/CjhvbiV8FrCS8Fdk1X3JaRnQ2lmnQEjyVStC4aD51kWdJlGDcSCkjkyVQHxjAgMosXPP/A6X4CZKcozoWSPAAAAAElFTkSuQmCC" InformativeScreenshot="6df115dd45127c64e06ffd19ef94bbe3.jpg" Reference="pwY549v750yJCRtgqzgQGw/r_L_HA_eK0arDPbw1I_Q5w" Selector="&lt;html app='msedge.exe' htmlwindowname='*' title='*' /&gt;" Title="Oracle Fusion Cloud Applications" Url="[in_str_ApplicationURL]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log Message Execution Completed" sap:VirtualizedContainerService.HintSize="450,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Logout Workflow Execution Completed&quot;]" />
+  </Sequence>
+</Activity>
